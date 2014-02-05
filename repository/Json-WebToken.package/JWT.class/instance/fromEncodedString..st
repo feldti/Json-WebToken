@@ -6,8 +6,8 @@ fromEncodedString: aString
 	(segments size = 2 or:[segments size = 3])
 		ifFalse:[self error:'Too many or not enough segments'].
 		
-	headerString := self base64UrlDecoded: segments first.
-	payloadString := self base64UrlDecoded: segments second.
+	headerString := (self base64UrlDecoded: segments first) convertFromEncoding: 'utf-8'.
+	payloadString := (self base64UrlDecoded: segments second) convertFromEncoding: 'utf-8'.
 	[headerfields := JSJsonParser parse: headerString.
 	 payload := JSJsonParser parse: payloadString]
 		on: JSJsonSyntaxError do:[:e | self error: 'Incorrect string encoding or invalid json content'].
