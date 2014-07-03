@@ -1,2 +1,2 @@
 SystemOrganization addCategory: #'Json-WebToken'!
-SystemOrganization addCategory: #'Json-WebToken-Tests'!
+SystemOrganization addCategory: 'Json-WebToken-Tests'!
