@@ -8,7 +8,9 @@ baseline: spec
 			spec blessing: #baseline.
 			spec
 				package: 'Json-WebToken'
-				with: [ spec requires: #('Cryptography') ] ].
+				with: [ spec requires: #('Cryptography') ].
+				
+			spec group: 'default' with: #('Json-WebToken') ].
 			
 	spec 
 		for: #pharo

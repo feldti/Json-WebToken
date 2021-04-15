@@ -1,3 +1,5 @@
 private
 base64UrlDecoded: aString
-	^ ((aString copyReplaceAll: '-' with:  '+') copyReplaceAll: '_' with: '/') base64Decoded.
+	| padding |
+	padding := String new: 4 - (aString size \\ 4) withAll: $=.
+	^ (((aString copyReplaceAll: '-' with:  '+') copyReplaceAll: '_' with: '/'), padding) base64Decoded asString.

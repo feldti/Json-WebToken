@@ -15,7 +15,7 @@ testEncodingDecodingNonASCII
 		these tokens may or may not be the same as that of token1, depending on how the payload object is converted to a string by #asJson):"
 	token2 := JWT new key: key; payload: (Dictionary with: 'name' -> 'Ægir'); yourself.
 	token3 := JWT new key: key; fromEncodedString: token2 encodedString.	
-	self assert: token3 payload = token3 payload.
+	self assert: token3 payload = token2 payload.
 	
 	"Tests whether encoding and decoding works for a payload containing non-Basic Multilingual Plane characters using the name 'LOGI'
 		written out using the squared latin capital letters of code points U+1F130 through U+1F149:"
