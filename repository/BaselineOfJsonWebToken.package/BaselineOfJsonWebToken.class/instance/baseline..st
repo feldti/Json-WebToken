@@ -38,7 +38,7 @@ baseline: spec
 				baseline: 'PharoCompatibility'
       			with: [ 
 					spec 
-						repository: 'github://glassdb/PharoCompatibility:master/repository';
+						repository: 'github://GsDevKit/PharoCompatibility:master/repository';
       					loads: 'Core' ].
 				
 			spec 
