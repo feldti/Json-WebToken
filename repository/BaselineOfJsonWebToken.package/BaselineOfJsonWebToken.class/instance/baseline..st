@@ -39,7 +39,7 @@ baseline: spec
       			with: [ 
 					spec 
 						repository: 'github://glassdb/PharoCompatibility:master/repository';
-      					load: 'Core' ].
+      					loads: 'Core' ].
 				
 			spec 
 				group: 'default' with: #('PharoCompatibility')
