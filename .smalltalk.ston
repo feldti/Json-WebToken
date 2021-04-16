@@ -1,0 +1,10 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'Json-WebToken',
+      #directory : 'repository',
+      #load : [ 'default' ],
+      #onWarningLog : true
+    }
+  ]
+}
