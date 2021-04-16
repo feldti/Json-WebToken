@@ -33,4 +33,15 @@ baseline: spec
 		do: [  
 			spec
 				baseline: 'Cryptography'
-   				with: [ spec repository: 'github://GsDevKit/Cryptography:master/repository' ] ]
+   				with: [ spec repository: 'github://GsDevKit/Cryptography:master/repository' ].
+			spec
+				baseline: 'PharoCompatibility'
+      			with: [ 
+					spec 
+						repository: 'github://glassdb/PharoCompatibility:master/repository';
+      					load: 'Core' ].
+				
+			spec 
+				group: 'default' with: #('PharoCompatibility')
+			
+			 ]
