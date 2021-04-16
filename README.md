@@ -2,5 +2,4 @@ A JSON WebToken ([JWT](https://tools.ietf.org/html/rfc7519.html)) implementation
 
 ## Dependencies
 
-This implementation relies on (parts of) the [Seaside](https://github.com/SeasideSt/Seaside) and, for GemStone, the [PharoCompatibility](https://github.com/GsDevKit/PharoCompatibility) projects.
-
+This implementation relies on the [Seaside](https://github.com/SeasideSt/Seaside) project as well as the [Cryptography](https://github.com/pharo-contributions/Cryptography) project (for Pharo) or [Cryptography](https://github.com/GsDevKit/Cryptography) (for GemStone), and the [PharoCompatibility](https://github.com/GsDevKit/PharoCompatibility) project in GemStone.
