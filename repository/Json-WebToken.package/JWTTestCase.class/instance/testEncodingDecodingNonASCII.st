@@ -19,6 +19,6 @@ testEncodingDecodingNonASCII
 	
 	"Tests whether encoding and decoding works for a payload containing non-Basic Multilingual Plane characters using the name 'LOGI'
 		written out using the squared latin capital letters of code points U+1F130 through U+1F149:"
-	token4 := JWT new key: key; payload: (Dictionary with: 'name' -> (#(16r1F13B 16r1F13E 16r1F136 16r1F138) collect: [ :cp | Character codePoint: cp ] as: String)).
+	token4 := JWT new key: key; payload: (Dictionary with: 'name' -> (String withAll: (#(16r1F13B 16r1F13E 16r1F136 16r1F138) collect: [ :cp | Character codePoint: cp ]))).
 	token5 := JWT new key: key; fromEncodedString: token4 encodedString.
 	self assert: token4 payload = token5 payload.
